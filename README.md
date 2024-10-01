@@ -7,4 +7,4 @@ The folder scripts contains two ipynb files to preprocess the data.
 
 The datasets are stored in `data/processed`.
 
-Training can be performed by setting the parameters in `DCRNN_PyTorch_config/dcrnn_network.yaml` and running `dcrnn_train_pytorch.py` as described in the [original implementation][https://github.com/chnsh/DCRNN_PyTorch].
+Training can be performed by setting the parameters in `DCRNN_PyTorch_config/dcrnn_network.yaml` and running `dcrnn_train_pytorch.py` as described in the ![original implementation][https://github.com/chnsh/DCRNN_PyTorch].
