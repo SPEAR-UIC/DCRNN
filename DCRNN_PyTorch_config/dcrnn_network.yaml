@@ -1,0 +1,44 @@
+---
+base_dir: data/model
+log_level: INFO
+gpu_id: 0
+data:
+  batch_size: 12
+  dataset_dir: /home/plodir2/network-predictive-analysis/data/processed/72.milc36+ur36.rand.2000iterations.20240108/DCRNN/[seq_len]in_[horizon]out_[input_dim]features_[output_dim]targets_0
+  test_batch_size: 1
+  val_batch_size: 1
+  graph_pkl_filename: /home/plodir2/network-predictive-analysis/data/processed/adj.pkl
+
+model:
+  cl_decay_steps: 7000
+  filter_type: random_walk
+  horizon: 1
+  input_dim: 45
+  l1_decay: 0
+  max_diffusion_step: 0
+  num_nodes: 252
+  num_rnn_layers: 2
+  output_dim: 1
+  rnn_units: 64
+  seq_len: 2
+  dropout: 0.5
+  use_curriculum_learning: false
+  filter_test_loss: true
+  loss: mae
+
+train:
+  base_lr: 0.00001
+  dropout: 0
+  epoch: 0
+  epochs: 10000
+  epsilon: 0.001
+  global_step: 0
+  loss_plot_every_n_epochs: 1
+  lr_decay_ratio: 0.1
+  max_grad_norm: 5
+  max_to_keep: 100
+  min_learning_rate: 2.0e-06
+  optimizer: adam
+  patience: 500
+  steps: [800]
+  test_every_n_epochs: 10
